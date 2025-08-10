@@ -34,22 +34,22 @@ const Footer: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: <Phone />,
+      icon: <Phone size={18} strokeWidth={1.5} />,
       text: '+91 98765 43210',
       link: 'tel:+919876543210'
     },
     {
-      icon: <Mail />,
+      icon: <Mail size={18} strokeWidth={1.5} />,
       text: 'info@ashtavinayaklogistics.com',
       link: 'mailto:info@ashtavinayaklogistics.com'
     },
     {
-      icon: <MapPin />,
+      icon: <MapPin size={18} strokeWidth={1.5} />,
       text: '123 Logistics Park, Andheri East, Mumbai',
       link: 'https://maps.google.com'
     },
     {
-      icon: <Clock />,
+      icon: <Clock size={18} strokeWidth={1.5} />,
       text: 'Mon-Fri: 8AM-8PM, Sat: 9AM-6PM',
       link: null
     }
@@ -124,10 +124,36 @@ const Footer: React.FC = () => {
               <h3>Contact Information</h3>
               <div className="contact-list">
                 {contactInfo.map((contact, index) => (
-                  <div key={index} className="contact-item">
-                    <span className="contact-icon">{contact.icon}</span>
+                  <div 
+                    key={index} 
+                    className="contact-item"
+                    style={{ 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      marginBottom: '12px' 
+                    }}
+                  >
+                    <span 
+                      className="contact-icon"
+                      style={{ 
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '22px',
+                        height: '22px',
+                        marginRight: '12px',
+                        flexShrink: 0,
+                        verticalAlign: 'middle'
+                      }}
+                    >
+                      {contact.icon}
+                    </span>
                     {contact.link ? (
-                      <a href={contact.link} className="contact-link">
+                      <a 
+                        href={contact.link} 
+                        className="contact-link"
+                        style={{ textDecoration: 'none', color: 'inherit' }}
+                      >
                         {contact.text}
                       </a>
                     ) : (
