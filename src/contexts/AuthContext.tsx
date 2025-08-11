@@ -63,10 +63,13 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const login = async (credentials: LoginRequest): Promise<boolean> => {
     try {
       setIsLoading(true);
+      console.log('Attempting login with credentials:', credentials);
       const response = await authAPI.login(credentials);
+      console.log('Login response:', response);
       
       if (response.success) {
         const { user, token } = response.data;
+        console.log('Login successful, user:', user);
         
         // Store token and user data
         localStorage.setItem('auth_token', token);
@@ -76,10 +79,12 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         toast.success(response.message || 'Login successful!');
         return true;
       } else {
+        console.log('Login failed:', response.message);
         toast.error(response.message || 'Login failed');
         return false;
       }
     } catch (error: any) {
+      console.error('Login error:', error);
       const errorMessage = error.response?.data?.message || 'Login failed. Please try again.';
       toast.error(errorMessage);
       return false;
