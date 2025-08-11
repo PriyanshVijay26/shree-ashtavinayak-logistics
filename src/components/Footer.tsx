@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
     },
     {
       icon: <MapPin size={18} strokeWidth={1.5} />,
-      text: '123 Logistics Park, Andheri East, Mumbai',
+      text: 'South Extension, Arjun Nagar, Kotla Mubarakpur, South Extension I, New Delhi',
       link: 'https://maps.google.com'
     },
     {
