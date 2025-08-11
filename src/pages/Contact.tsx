@@ -32,39 +32,34 @@ const Contact: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Shipshphere Logistics Inquiry - ${formData.service || 'General'}`);
-    const body = encodeURIComponent(`
-Dear Shipshphere Logistics Team,
-
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Company: ${formData.company}
-Service Required: ${formData.service}
-
-Message:
-${formData.message}
-
-Best regards,
-${formData.name}
-    `);
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
     
-    const mailtoLink = `mailto:priyanshvijay2002@gmail.com?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
-    
-    setIsSubmitted(true);
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      company: '',
-      service: '',
-      message: ''
+    // Submit to Netlify
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString()
+    })
+    .then(() => {
+      // Show success message
+      setIsSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        service: '',
+        message: ''
+      });
+      
+      // Reset submission status after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('Sorry, there was an error sending your message. Please try contacting us directly at shipspheretechnologies@gmail.com');
     });
-    
-    // Reset submission status after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000);
   };
 
   const contactInfo = [
@@ -232,7 +227,18 @@ ${formData.name}
                 </motion.div>
               )}
 
-              <form onSubmit={handleSubmit} className={isSubmitted ? 'hidden' : ''}>
+              <form 
+                name="contact-form"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit} 
+                className={isSubmitted ? 'hidden' : ''}
+              >
+                {/* Hidden fields for Netlify */}
+                <input type="hidden" name="form-name" value="contact-form" />
+                <input type="hidden" name="bot-field" />
+                
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="name">Full Name *</label>
