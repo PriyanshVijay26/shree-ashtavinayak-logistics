@@ -238,6 +238,7 @@ const Contact: React.FC = () => {
                 {/* Hidden fields for Netlify */}
                 <input type="hidden" name="form-name" value="contact-form" />
                 <input type="hidden" name="bot-field" />
+                <input type="hidden" name="email-to" value="priyanshvijay2002@gmail.com" />
                 
                 <div className="form-row">
                   <div className="form-group">
