@@ -20,6 +20,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+console.log('🔧 CORS Origin:', process.env.FRONTEND_URL || 'http://localhost:3000');
 app.use(helmet());
 app.use(cors({
   origin: process.env.FRONTEND_URL || 'http://localhost:3000',
@@ -33,7 +34,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/cities', cityRoutes);
 app.use('/api/users', userRoutes);
 
-// Health check endpoint
+// Health check endpoint - Force redeploy
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'OK', 
