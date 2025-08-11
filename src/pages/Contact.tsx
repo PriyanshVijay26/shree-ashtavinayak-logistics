@@ -19,7 +19,6 @@ const Contact: React.FC = () => {
     service: '',
     message: ''
   });
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -187,26 +186,13 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="contact-form"
             >
-              {isSubmitted && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="success-message"
-                >
-                  <CheckCircle />
-                  <h3>Thank You!</h3>
-                  <p>Your message has been sent successfully. We'll get back to you soon.</p>
-                </motion.div>
-              )}
-
               <form 
                 name="contact-form"
                 method="POST"
                 action="/thank-you.html"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                onSubmit={handleSubmit} 
-                className={isSubmitted ? 'hidden' : ''}
+                onSubmit={handleSubmit}
               >
                 {/* Hidden fields for Netlify */}
                 <input type="hidden" name="form-name" value="contact-form" />
