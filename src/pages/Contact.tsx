@@ -50,7 +50,7 @@ Best regards,
 ${formData.name}
     `);
     
-    const mailtoLink = `mailto:shipspheretechnologies@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:priyanshvijay2002@gmail.com?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
     
     setIsSubmitted(true);
