@@ -127,7 +127,7 @@ const Home: React.FC = () => {
           </div>
 
           <div className="services-cta">
-            <Link to="/services" className="btn btn-outline">
+            <Link to="/services" className="btn btn-secondary">
               View All Services
               <ArrowRight />
             </Link>

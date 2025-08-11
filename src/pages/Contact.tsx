@@ -19,6 +19,7 @@ const Contact: React.FC = () => {
     service: '',
     message: ''
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -29,8 +30,31 @@ const Contact: React.FC = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    // Don't prevent default - let Netlify handle the form submission naturally
-    console.log('Form submitted - Netlify will handle this');
+    e.preventDefault();
+    
+    // Create a FormData object and submit via fetch
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString()
+    })
+    .then(() => {
+      setIsSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        service: '',
+        message: ''
+      });
+      // Reset submission status after 3 seconds
+      setTimeout(() => setIsSubmitted(false), 3000);
+    })
+    .catch((error) => console.error('Form submission error:', error));
   };
 
   const contactInfo = [
@@ -186,13 +210,25 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="contact-form"
             >
+              {isSubmitted && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="success-message"
+                >
+                  <CheckCircle />
+                  <h3>Thank You!</h3>
+                  <p>Your message has been sent successfully. We'll get back to you soon.</p>
+                </motion.div>
+              )}
+
               <form 
                 name="contact-form"
                 method="POST"
-                action="/thank-you.html"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={handleSubmit}
+                className={isSubmitted ? 'hidden' : ''}
               >
                 {/* Hidden fields for Netlify */}
                 <input type="hidden" name="form-name" value="contact-form" />
