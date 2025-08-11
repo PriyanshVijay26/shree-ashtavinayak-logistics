@@ -171,11 +171,11 @@ const Services: React.FC = () => {
                   </ul>
                 </div>
                 <div className="service-cta">
-                  <a href="tel:+919876543210" className="btn btn-primary">
+                  <a href="tel:+918076727536" className="btn btn-primary">
                     Get Quote
                     <Phone />
                   </a>
-                  <a href="mailto:info@ashtavinayaklogistics.com" className="btn btn-outline">
+                  <a href="mailto:shipspheretechnologies@gmail.com" className="btn btn-outline">
                     Learn More
                     <Mail />
                   </a>
@@ -451,11 +451,11 @@ const Services: React.FC = () => {
             <h2>Need a Custom Solution?</h2>
             <p>Contact our team to discuss your specific logistics requirements</p>
             <div className="cta-buttons">
-              <a href="tel:+919876543210" className="btn btn-primary">
+              <a href="tel:+919773575251" className="btn btn-primary">
                 Call Us Now
                 <Phone />
               </a>
-              <a href="mailto:info@ashtavinayaklogistics.com" className="btn btn-secondary">
+              <a href="mailto:shipspheretechnologies@gmail.com" className="btn btn-secondary">
                 Send Email
                 <Mail />
               </a>

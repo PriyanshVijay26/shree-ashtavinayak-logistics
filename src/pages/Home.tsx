@@ -62,7 +62,7 @@ const Home: React.FC = () => {
           >
             <h1>Your Trusted Logistics Partner</h1>
             <p>
-              Shree Ashtavinayak Logistics provides comprehensive transportation and 
+              Shipshphere Logistics provides comprehensive transportation and 
               warehousing solutions across India. We ensure your cargo reaches its 
               destination safely and on time.
             </p>
@@ -165,7 +165,7 @@ const Home: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="section-header"
           >
-            <h2>Why Choose Shree Ashtavinayak Logistics?</h2>
+            <h2>Why Choose Shipshphere Logistics?</h2>
             <p>We deliver excellence in every shipment</p>
           </motion.div>
 
@@ -222,7 +222,7 @@ const Home: React.FC = () => {
                 Contact Us
                 <Mail />
               </Link>
-              <a href="tel:+919876543210" className="btn btn-secondary">
+              <a href="tel:+918076727536" className="btn btn-secondary">
                 Call Now
                 <Phone />
               </a>

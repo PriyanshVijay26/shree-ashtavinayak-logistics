@@ -118,9 +118,9 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="overview-text"
             >
-              <h2>Shree Ashtavinayak Logistics</h2>
+              <h2>Shipshphere Logistics</h2>
               <p>
-                Founded in 2010, Shree Ashtavinayak Logistics has grown from a small 
+                Founded in 2010, Shipshphere Logistics has grown from a small 
                 transportation company to one of the leading logistics providers in India. 
                 We specialize in providing comprehensive logistics solutions including 
                 road transportation, warehousing, international shipping, and express delivery.
@@ -337,11 +337,11 @@ const About: React.FC = () => {
             <h2>Ready to Partner with Us?</h2>
             <p>Let's discuss how we can help streamline your logistics operations</p>
             <div className="cta-buttons">
-              <a href="tel:+919876543210" className="btn btn-primary">
+              <a href="tel:+918076727536" className="btn btn-primary">
                 Call Us
                 <Phone />
               </a>
-              <a href="mailto:info@ashtavinayaklogistics.com" className="btn btn-secondary">
+              <a href="mailto:shipspheretechnologies@gmail.com" className="btn btn-secondary">
                 Send Email
                 <Mail />
               </a>

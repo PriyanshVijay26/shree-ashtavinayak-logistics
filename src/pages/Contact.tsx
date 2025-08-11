@@ -31,8 +31,28 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Shipshphere Logistics Inquiry - ${formData.service || 'General'}`);
+    const body = encodeURIComponent(`
+Dear Shipshphere Logistics Team,
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Company: ${formData.company}
+Service Required: ${formData.service}
+
+Message:
+${formData.message}
+
+Best regards,
+${formData.name}
+    `);
+    
+    const mailtoLink = `mailto:shipspheretechnologies@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+    
     setIsSubmitted(true);
     setFormData({
       name: '',
@@ -51,19 +71,19 @@ const Contact: React.FC = () => {
     {
       icon: <Phone />,
       title: 'Phone',
-      details: ['+91 98765 43210', '+91 98765 43211'],
-      action: 'tel:+919876543210'
+      details: ['8076727536', '9773575251'],
+      action: 'tel:+918076727536'
     },
     {
       icon: <Mail />,
       title: 'Email',
-      details: ['info@ashtavinayaklogistics.com', 'support@ashtavinayaklogistics.com'],
-      action: 'mailto:info@ashtavinayaklogistics.com'
+      details: ['shipspheretechnologies@gmail.com', 'support@shipshphere.com'],
+      action: 'mailto:shipspheretechnologies@gmail.com'
     },
     {
       icon: <MapPin />,
       title: 'Address',
-      details: ['123 Logistics Park, Andheri East', 'Mumbai, Maharashtra 400069, India'],
+      details: ['South Extension, Arjun Nagar, Kotla Mubarakpur', 'South Extension I, New Delhi, Delhi 110003, India'],
       action: 'https://maps.google.com'
     },
     {
@@ -89,28 +109,28 @@ const Contact: React.FC = () => {
 
   const branches = [
     {
-      city: 'Mumbai',
-      address: '123 Logistics Park, Andheri East',
-      phone: '+91 22 1234 5678',
-      email: 'mumbai@ashtavinayaklogistics.com'
+      city: 'New Delhi',
+      address: 'South Extension, Arjun Nagar, Kotla Mubarakpur, South Extension I',
+      phone: '8076727536',
+      email: 'shipspheretechnologies@gmail.com'
     },
     {
-      city: 'Delhi',
-      address: '456 Transport Hub, Okhla Industrial Area',
-      phone: '+91 11 2345 6789',
-      email: 'delhi@ashtavinayaklogistics.com'
+      city: 'Mumbai',
+      address: 'Logistics Hub, Andheri East',
+      phone: '9773575251',
+      email: 'mumbai@shipshphere.com'
     },
     {
       city: 'Bangalore',
-      address: '789 Cargo Center, Whitefield',
-      phone: '+91 80 3456 7890',
-      email: 'bangalore@ashtavinayaklogistics.com'
+      address: 'Cargo Center, Whitefield',
+      phone: '8076727536',
+      email: 'bangalore@shipshphere.com'
     },
     {
       city: 'Chennai',
-      address: '321 Logistics Zone, Ambattur',
-      phone: '+91 44 4567 8901',
-      email: 'chennai@ashtavinayaklogistics.com'
+      address: 'Logistics Zone, Ambattur',
+      phone: '9773575251',
+      email: 'chennai@shipshphere.com'
     }
   ];
 
@@ -355,15 +375,15 @@ const Contact: React.FC = () => {
                   <Phone />
                   <div>
                     <h4>Emergency Hotline</h4>
-                    <a href="tel:+919876543210">+91 98765 43210</a>
+                    <a href="tel:+918076727536">8076727536</a>
                   </div>
                 </div>
                 <div className="emergency-item">
                   <Mail />
                   <div>
                     <h4>Emergency Email</h4>
-                    <a href="mailto:emergency@ashtavinayaklogistics.com">
-                      emergency@ashtavinayaklogistics.com
+                    <a href="mailto:shipspheretechnologies@gmail.com">
+                      shipspheretechnologies@gmail.com
                     </a>
                   </div>
                 </div>

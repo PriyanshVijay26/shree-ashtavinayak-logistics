@@ -37,7 +37,7 @@ app.use('/api/users', userRoutes);
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'OK', 
-    message: 'Shree Ashtavinayak Logistics API is running',
+    message: 'Shipshphere Logistics API is running',
     timestamp: new Date().toISOString(),
     cors_origin: process.env.FRONTEND_URL
   });

@@ -35,13 +35,13 @@ const Footer: React.FC = () => {
   const contactInfo = [
     {
       icon: <Phone size={18} strokeWidth={1.5} />,
-      text: '+91 98765 43210',
-      link: 'tel:+919876543210'
+      text: '8076727536',
+      link: 'tel:+918076727536'
     },
     {
       icon: <Mail size={18} strokeWidth={1.5} />,
-      text: 'info@ashtavinayaklogistics.com',
-      link: 'mailto:info@ashtavinayaklogistics.com'
+      text: 'shipspheretechnologies@gmail.com',
+      link: 'mailto:shipspheretechnologies@gmail.com'
     },
     {
       icon: <MapPin size={18} strokeWidth={1.5} />,
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
             <div className="footer-section">
               <div className="footer-logo">
                 <Truck className="logo-icon" />
-                <span>Shree Ashtavinayak Logistics</span>
+                <span>Shipshphere Logistics</span>
               </div>
               <p>
                 Your trusted partner in logistics for over a decade. We provide 
@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
       <div className="footer-bottom">
         <div className="container">
           <div className="footer-bottom-content">
-            <p>&copy; {currentYear} Shree Ashtavinayak Logistics. All rights reserved.</p>
+            <p>&copy; {currentYear} Shipshphere Logistics. All rights reserved.</p>
             <div className="footer-bottom-links">
               <Link to="/privacy">Privacy Policy</Link>
               <Link to="/terms">Terms of Service</Link>
