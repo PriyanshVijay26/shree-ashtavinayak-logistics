@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
       <div className="nav-container">
         <Link to="/" className="nav-logo">
           <Truck className="logo-icon" />
-          <span>Shipshphere Logistics</span>
+          <span>Shipsphere Logistics</span>
         </Link>
 
         <div className="nav-menu">

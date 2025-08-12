@@ -1,7 +1,7 @@
 {
-  "name": "shipshphere-logistics-backend",
+  "name": "shipsphere-logistics-backend",
   "version": "1.0.0",
-  "description": "Backend API for Shipshphere Logistics",
+  "description": "Backend API for Shipsphere Logistics",
   "main": "dist/index.js",
   "engines": {
     "node": ">=18.0.0",

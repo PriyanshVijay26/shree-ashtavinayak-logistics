@@ -63,7 +63,7 @@ const Home: React.FC = () => {
           >
             <h1>Your Trusted Logistics Partner</h1>
             <p>
-              Shipshphere Logistics provides comprehensive transportation and 
+              Shipsphere Logistics provides comprehensive transportation and 
               warehousing solutions across India. We ensure your cargo reaches its 
               destination safely and on time.
             </p>
@@ -175,7 +175,7 @@ const Home: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="section-header"
           >
-            <h2>Why Choose Shipshphere Logistics?</h2>
+            <h2>Why Choose Shipsphere Logistics?</h2>
             <p>We deliver excellence in every shipment</p>
           </motion.div>
 

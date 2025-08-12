@@ -118,9 +118,9 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="overview-text"
             >
-              <h2>Shipshphere Logistics</h2>
+              <h2>Shipsphere Logistics</h2>
               <p>
-                Founded in 2010, Shipshphere Logistics has grown from a small 
+                Founded in 2010, Shipsphere Logistics has grown from a small 
                 transportation company to one of the leading logistics providers in India. 
                 We specialize in providing comprehensive logistics solutions including 
                 road transportation, warehousing, international shipping, and express delivery.

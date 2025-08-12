@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
             <div className="footer-section">
               <div className="footer-logo">
                 <Truck className="logo-icon" />
-                <span>Shipshphere Logistics</span>
+                <span>Shipsphere Logistics</span>
               </div>
               <p>
                 Your trusted partner in logistics for over a decade. We provide 
@@ -171,7 +171,7 @@ const Footer: React.FC = () => {
       <div className="footer-bottom">
         <div className="container">
           <div className="footer-bottom-content">
-            <p>&copy; {currentYear} Shipshphere Logistics. All rights reserved.</p>
+            <p>&copy; {currentYear} Shipsphere Logistics. All rights reserved.</p>
             <div className="footer-bottom-links">
               <Link to="/privacy">Privacy Policy</Link>
               <Link to="/terms">Terms of Service</Link>

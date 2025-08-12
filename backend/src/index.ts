@@ -38,7 +38,7 @@ app.use('/api/users', userRoutes);
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'OK', 
-    message: 'Shipshphere Logistics API is running',
+    message: 'Shipsphere Logistics API is running',
     timestamp: new Date().toISOString(),
     cors_origin: process.env.FRONTEND_URL
   });

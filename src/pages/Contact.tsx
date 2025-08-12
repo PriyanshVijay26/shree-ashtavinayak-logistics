@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
     {
       icon: <Mail />,
       title: 'Email',
-      details: ['shipspheretechnologies@gmail.com', 'support@shipshphere.com'],
+      details: ['shipspheretechnologies@gmail.com', 'support@shipsphere.com'],
       action: 'mailto:shipspheretechnologies@gmail.com'
     },
     {
@@ -108,19 +108,19 @@ const Contact: React.FC = () => {
       city: 'Mumbai',
       address: 'Logistics Hub, Andheri East',
       phone: '9773575251',
-      email: 'mumbai@shipshphere.com'
+      email: 'mumbai@shipsphere.com'
     },
     {
       city: 'Bangalore',
       address: 'Cargo Center, Whitefield',
       phone: '8076727536',
-      email: 'bangalore@shipshphere.com'
+      email: 'bangalore@shipsphere.com'
     },
     {
       city: 'Chennai',
       address: 'Logistics Zone, Ambattur',
       phone: '9773575251',
-      email: 'chennai@shipshphere.com'
+      email: 'chennai@shipsphere.com'
     }
   ];
 
