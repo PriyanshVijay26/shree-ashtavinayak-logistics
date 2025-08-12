@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
@@ -12,10 +12,28 @@ import {
   Phone,
   Mail,
   ArrowRight,
-  FileText
+  FileText,
+  Search,
+  X
 } from 'lucide-react';
 
-const Home: React.FC = () => {
+const Home = () => {
+  const [showTrackingModal, setShowTrackingModal] = useState(false);
+  const [orderId, setOrderId] = useState('');
+
+  const handleTrackOrder = () => {
+    if (orderId.trim()) {
+      window.open(`https://www.delhivery.com/tracking?trackingId=${orderId.trim()}`, '_blank');
+      setShowTrackingModal(false);
+      setOrderId('');
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleTrackOrder();
+    }
+  };
   const services = [
     {
       icon: <Truck />,
@@ -75,6 +93,13 @@ const Home: React.FC = () => {
               <Link to="/contact" className="btn btn-secondary">
                 Get Quote
               </Link>
+              <button 
+                onClick={() => setShowTrackingModal(true)}
+                className="btn btn-secondary"
+              >
+                <Search />
+                Track Your Order
+              </button>
               <a 
                 href="/documents/RATE CARD OF SHIPSPHERE LOGISTICS .pdf" 
                 target="_blank" 
@@ -240,6 +265,51 @@ const Home: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Track Order Modal */}
+      {showTrackingModal && (
+        <div className="modal-overlay" onClick={() => setShowTrackingModal(false)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h3>Track Your Order</h3>
+              <button 
+                className="modal-close"
+                onClick={() => setShowTrackingModal(false)}
+              >
+                <X size={24} />
+              </button>
+            </div>
+            <div className="modal-body">
+              <p>Enter your order ID to track your shipment:</p>
+              <input
+                type="text"
+                value={orderId}
+                onChange={(e) => setOrderId(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Enter Order ID"
+                className="tracking-input"
+                autoFocus
+              />
+              <div className="modal-buttons">
+                <button 
+                  onClick={handleTrackOrder}
+                  className="btn btn-primary"
+                  disabled={!orderId.trim()}
+                >
+                  <Search />
+                  Track Order
+                </button>
+                <button 
+                  onClick={() => setShowTrackingModal(false)}
+                  className="btn btn-secondary"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
