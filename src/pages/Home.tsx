@@ -79,7 +79,7 @@ const Home: React.FC = () => {
                 href="/documents/RATE CARD OF SHIPSPHERE LOGISTICS .pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn btn-outline"
+                className="btn btn-secondary"
               >
                 <FileText />
                 Rate Card
