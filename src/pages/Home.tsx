@@ -11,7 +11,8 @@ import {
   MapPin, 
   Phone,
   Mail,
-  ArrowRight
+  ArrowRight,
+  FileText
 } from 'lucide-react';
 
 const Home: React.FC = () => {
@@ -74,6 +75,15 @@ const Home: React.FC = () => {
               <Link to="/contact" className="btn btn-secondary">
                 Get Quote
               </Link>
+              <a 
+                href="/documents/RATE CARD OF SHIPSPHERE LOGISTICS .pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+              >
+                <FileText />
+                Rate Card
+              </a>
             </div>
           </motion.div>
           <motion.div
