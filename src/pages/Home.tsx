@@ -23,10 +23,26 @@ const Home = () => {
 
   const handleTrackOrder = () => {
     if (orderId.trim()) {
-      const trackingId = orderId.trim();
+      const trackingNumber = orderId.trim();
       
-      // Use Delhivery's main tracking page with AWB parameter
-      window.open(`https://www.delhivery.com/track?awb=${trackingId}`, '_blank');
+      // Copy to clipboard and open Delhivery tracking page
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(trackingNumber).then(() => {
+          window.open('https://www.delhivery.com/tracking', '_blank');
+          // Show a more helpful message
+          setTimeout(() => {
+            alert(`✅ Tracking number "${trackingNumber}" copied to clipboard!\n\nThe Delhivery tracking page is now open. Simply paste (Ctrl+V) the tracking number in the AWB field.`);
+          }, 500);
+        }).catch(() => {
+          // Fallback if clipboard API fails
+          window.open('https://www.delhivery.com/tracking', '_blank');
+          prompt(`Copy this tracking number and paste it on the Delhivery page:`, trackingNumber);
+        });
+      } else {
+        // Fallback for browsers without clipboard API
+        window.open('https://www.delhivery.com/tracking', '_blank');
+        prompt(`Copy this tracking number and paste it on the Delhivery page:`, trackingNumber);
+      }
       
       setShowTrackingModal(false);
       setOrderId('');
@@ -284,7 +300,7 @@ const Home = () => {
               </button>
             </div>
             <div className="modal-body">
-              <p>Enter your AWB/Order ID to track your shipment:</p>
+              <p>Enter your AWB/Order ID below. We'll copy it and open Delhivery's tracking page for you:</p>
               <input
                 type="text"
                 value={orderId}
