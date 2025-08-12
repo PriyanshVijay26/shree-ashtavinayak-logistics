@@ -171,7 +171,7 @@ const Services: React.FC = () => {
                   </ul>
                 </div>
                 <div className="service-cta">
-                  <a href="tel:+918076727536" className="btn btn-primary">
+                  <a href="tel:+919773575251" className="btn btn-primary">
                     Get Quote
                     <Phone />
                   </a>

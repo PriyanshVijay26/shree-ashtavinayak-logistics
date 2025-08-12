@@ -61,8 +61,8 @@ const Contact: React.FC = () => {
     {
       icon: <Phone />,
       title: 'Phone',
-      details: ['8076727536', '9773575251'],
-      action: 'tel:+918076727536'
+      details: ['9773575251', '9773575251'],
+      action: 'tel:+919773575251'
     },
     {
       icon: <Mail />,
@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
     {
       city: 'New Delhi',
       address: 'South Extension, Arjun Nagar, Kotla Mubarakpur, South Extension I',
-      phone: '8076727536',
+      phone: '9773575251',
       email: 'shipspheretechnologies@gmail.com'
     },
     {
@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
     {
       city: 'Bangalore',
       address: 'Cargo Center, Whitefield',
-      phone: '8076727536',
+      phone: '9773575251',
       email: 'bangalore@shipsphere.com'
     },
     {
@@ -377,7 +377,7 @@ const Contact: React.FC = () => {
                   <Phone />
                   <div>
                     <h4>Emergency Hotline</h4>
-                    <a href="tel:+918076727536">8076727536</a>
+                    <a href="tel:+919773575251">9773575251</a>
                   </div>
                 </div>
                 <div className="emergency-item">

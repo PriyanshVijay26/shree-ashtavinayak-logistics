@@ -35,8 +35,8 @@ const Footer: React.FC = () => {
   const contactInfo = [
     {
       icon: <Phone size={18} strokeWidth={1.5} />,
-      text: '8076727536',
-      link: 'tel:+918076727536'
+      text: '9773575251',
+      link: 'tel:+919773575251'
     },
     {
       icon: <Mail size={18} strokeWidth={1.5} />,

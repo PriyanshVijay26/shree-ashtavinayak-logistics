@@ -337,7 +337,7 @@ const About: React.FC = () => {
             <h2>Ready to Partner with Us?</h2>
             <p>Let's discuss how we can help streamline your logistics operations</p>
             <div className="cta-buttons">
-              <a href="tel:+918076727536" className="btn btn-primary">
+              <a href="tel:+919773575251" className="btn btn-primary">
                 Call Us
                 <Phone />
               </a>

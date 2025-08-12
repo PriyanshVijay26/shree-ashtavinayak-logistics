@@ -232,7 +232,7 @@ const Home: React.FC = () => {
                 Contact Us
                 <Mail />
               </Link>
-              <a href="tel:+918076727536" className="btn btn-secondary">
+              <a href="tel:+919773575251" className="btn btn-secondary">
                 Call Now
                 <Phone />
               </a>
