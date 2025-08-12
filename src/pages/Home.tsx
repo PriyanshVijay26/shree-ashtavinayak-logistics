@@ -23,7 +23,11 @@ const Home = () => {
 
   const handleTrackOrder = () => {
     if (orderId.trim()) {
-      window.open(`https://www.delhivery.com/tracking?trackingId=${orderId.trim()}`, '_blank');
+      const trackingId = orderId.trim();
+      
+      // Use Delhivery's main tracking page with AWB parameter
+      window.open(`https://www.delhivery.com/track?awb=${trackingId}`, '_blank');
+      
       setShowTrackingModal(false);
       setOrderId('');
     }
@@ -280,13 +284,13 @@ const Home = () => {
               </button>
             </div>
             <div className="modal-body">
-              <p>Enter your order ID to track your shipment:</p>
+              <p>Enter your AWB/Order ID to track your shipment:</p>
               <input
                 type="text"
                 value={orderId}
                 onChange={(e) => setOrderId(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Enter Order ID"
+                placeholder="Enter AWB Number or Order ID"
                 className="tracking-input"
                 autoFocus
               />
