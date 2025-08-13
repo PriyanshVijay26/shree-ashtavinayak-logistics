@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
                 <span>Shipsphere Logistics</span>
               </div>
               <p>
-                Your trusted partner in logistics for over a decade. We provide 
+                Your trusted partner in logistics for B2B and B2C orders. We provide 
                 comprehensive transportation and warehousing solutions across India 
                 with a commitment to reliability, efficiency, and customer satisfaction.
               </p>
@@ -129,36 +129,12 @@ const Footer: React.FC = () => {
               <h3>Contact Information</h3>
               <div className="contact-list">
                 {contactInfo.map((contact, index) => (
-                  <div 
-                    key={index} 
-                    className="contact-item"
-                    style={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      marginBottom: '12px' 
-                    }}
-                  >
-                    <span 
-                      className="contact-icon"
-                      style={{ 
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        width: '22px',
-                        height: '22px',
-                        marginRight: '12px',
-                        flexShrink: 0,
-                        verticalAlign: 'middle'
-                      }}
-                    >
+                  <div key={index} className="contact-item">
+                    <span className="contact-icon">
                       {contact.icon}
                     </span>
                     {contact.link ? (
-                      <a 
-                        href={contact.link} 
-                        className="contact-link"
-                        style={{ textDecoration: 'none', color: 'inherit' }}
-                      >
+                      <a href={contact.link} className="contact-link">
                         {contact.text}
                       </a>
                     ) : (
