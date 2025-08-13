@@ -255,6 +255,13 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero-text {
+  padding-left: 1rem;
 }
 
 .hero-text h1 {
