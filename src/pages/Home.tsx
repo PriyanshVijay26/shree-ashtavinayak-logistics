@@ -69,8 +69,8 @@ const Home = () => {
     },
     {
       icon: <Globe />,
-      title: 'International Shipping',
-      description: 'Global logistics solutions with customs clearance and documentation.',
+      title: 'Local and National Shipping',
+      description: 'Comprehensive shipping solutions across India with door-to-door logistics services.',
       color: '#F59E0B'
     },
     {
@@ -83,7 +83,7 @@ const Home = () => {
 
   const stats = [
     { number: '500+', label: 'Happy Clients', icon: <Users /> },
-    { number: '50+', label: 'Cities Covered', icon: <MapPin /> },
+    { number: '200+', label: 'Cities Covered', icon: <MapPin /> },
     { number: '24/7', label: 'Support', icon: <Phone /> },
     { number: '99%', label: 'On-time Delivery', icon: <Clock /> }
   ];
@@ -138,11 +138,36 @@ const Home = () => {
             className="hero-image"
           >
             <div className="hero-visual">
-              <Truck className="hero-truck" />
-              <div className="hero-packages">
-                <Package />
-                <Package />
-                <Package />
+              {/* Replace with your actual image */}
+              <img 
+                src="/images/logistics-hero.jpg" 
+                alt="Man holding package with logistics truck" 
+                className="hero-main-image"
+                onError={(e) => {
+                  // Fallback to icon if image not found
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  target.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="hero-visual-fallback">
+                <Truck className="hero-truck" />
+                <div className="hero-packages">
+                  <Package />
+                  <Package />
+                  <Package />
+                </div>
+              </div>
+              <div className="hero-truck-message">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                  className="truck-message-box"
+                >
+                  <Truck className="message-truck-icon" />
+                  <p>Let us handle your first order to experience our exceptional service quality!</p>
+                </motion.div>
               </div>
             </div>
           </motion.div>
@@ -211,7 +236,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Best Rates & Services */}
       <section className="why-choose-us">
         <div className="container">
           <motion.div
@@ -220,8 +245,8 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="section-header"
           >
-            <h2>Why Choose Shipsphere Logistics?</h2>
-            <p>We deliver excellence in every shipment</p>
+            <h2>Best Rates Guaranteed</h2>
+            <p className="highlight-pricing">B2B shipping starts at ₹6/kg</p>
           </motion.div>
 
           <div className="features-grid">
@@ -278,7 +303,11 @@ const Home = () => {
                 <Mail />
               </Link>
               <a href="tel:+919773575251" className="btn btn-secondary">
-                Call Now
+                Call: +91 9773575251
+                <Phone />
+              </a>
+              <a href="tel:+917012279296" className="btn btn-secondary">
+                Call: +91 7012279296
                 <Phone />
               </a>
             </div>

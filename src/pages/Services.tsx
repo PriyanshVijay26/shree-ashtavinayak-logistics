@@ -46,14 +46,14 @@ const Services: React.FC = () => {
     },
     {
       icon: <Globe />,
-      title: 'International Shipping',
-      description: 'Global logistics solutions with customs clearance expertise.',
+      title: 'Local and National Shipping',
+      description: 'Comprehensive shipping solutions across India with door-to-door logistics services.',
       features: [
-        'Air freight services',
-        'Ocean freight (FCL/LCL)',
-        'Customs clearance',
-        'Documentation assistance',
-        'Door-to-port delivery',
+        'B2B and B2C orders',
+        'Door-to-door delivery',
+        'Local city delivery',
+        'Interstate transportation',
+        'Real-time tracking',
         'Insurance coverage'
       ],
       color: '#F59E0B'
@@ -71,20 +71,6 @@ const Services: React.FC = () => {
         'Proof of delivery'
       ],
       color: '#EF4444'
-    },
-    {
-      icon: <Ship />,
-      title: 'Ocean Freight',
-      description: 'Cost-effective sea freight solutions for international trade.',
-      features: [
-        'Full Container Load (FCL)',
-        'Less than Container Load (LCL)',
-        'Port-to-port services',
-        'Customs documentation',
-        'Cargo insurance',
-        'Tracking and monitoring'
-      ],
-      color: '#8B5CF6'
     },
     {
       icon: <Plane />,
@@ -130,15 +116,38 @@ const Services: React.FC = () => {
       {/* Hero Section */}
       <section className="page-hero">
         <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="hero-content"
-          >
-            <h1>Our Services</h1>
-            <p>Comprehensive logistics solutions tailored to meet your business needs</p>
-          </motion.div>
+          <div className="services-hero-content">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="hero-text-content"
+            >
+              <h1>Our Services</h1>
+              <p>Comprehensive logistics solutions tailored to meet your business needs</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="services-hero-image"
+            >
+              <img 
+                src="/images/logistics-truck.jpg" 
+                alt="Logistics Truck" 
+                className="truck-hero-image"
+                onError={(e) => {
+                  // Fallback to truck icon if image not found
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  target.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="truck-icon-fallback hidden">
+                <Truck className="large-truck-icon" />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -452,7 +461,11 @@ const Services: React.FC = () => {
             <p>Contact our team to discuss your specific logistics requirements</p>
             <div className="cta-buttons">
               <a href="tel:+919773575251" className="btn btn-primary">
-                Call Us Now
+                Call: +91 9773575251
+                <Phone />
+              </a>
+              <a href="tel:+917012279296" className="btn btn-primary">
+                Call: +91 7012279296
                 <Phone />
               </a>
               <a href="mailto:shipspheretechnologies@gmail.com" className="btn btn-secondary">

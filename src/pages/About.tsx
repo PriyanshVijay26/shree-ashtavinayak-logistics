@@ -15,27 +15,27 @@ import {
 const About: React.FC = () => {
   const milestones = [
     {
-      year: '2010',
+      year: '',
       title: 'Company Founded',
-      description: 'Started as a small transportation company in Mumbai'
+      description: 'Started as a small transportation company in Delhi'
     },
     {
-      year: '2015',
+      year: '',
       title: 'Expansion Phase',
       description: 'Expanded to 10 major cities across India'
     },
     {
-      year: '2018',
+      year: '',
       title: 'Warehouse Addition',
       description: 'Added warehousing and storage facilities'
     },
     {
-      year: '2020',
-      title: 'International Services',
-      description: 'Launched international shipping and freight services'
+      year: '',
+      title: 'Local & National Services',
+      description: 'Launched comprehensive local and national shipping services'
     },
     {
-      year: '2023',
+      year: '',
       title: 'Digital Transformation',
       description: 'Implemented advanced tracking and management systems'
     }
@@ -66,27 +66,27 @@ const About: React.FC = () => {
 
   const team = [
     {
-      name: 'Rajesh Kumar',
-      position: 'CEO & Founder',
-      experience: '15+ years in logistics',
+      name: 'Ayush Singh',
+      position: 'Senior Executive',
+      experience: '6 years in logistics',
       image: '/api/placeholder/150/150'
     },
     {
-      name: 'Priya Sharma',
-      position: 'Operations Director',
-      experience: '12+ years in supply chain',
+      name: 'Kanav Sachdeva',
+      position: 'Business Relationship Executive',
+      experience: '3 years in business development',
       image: '/api/placeholder/150/150'
     },
     {
-      name: 'Amit Patel',
-      position: 'Head of International',
-      experience: '10+ years in freight',
+      name: 'Arun Singh',
+      position: 'Business Development Head',
+      experience: '10 years in FTL PTL business',
       image: '/api/placeholder/150/150'
     },
     {
-      name: 'Sneha Reddy',
-      position: 'Customer Relations',
-      experience: '8+ years in customer service',
+      name: 'Tripti Pal',
+      position: 'Customer Relation',
+      experience: '3 years in customer service',
       image: '/api/placeholder/150/150'
     }
   ];
@@ -118,18 +118,16 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="overview-text"
             >
-              <h2>Shipsphere Logistics</h2>
+              <h2>About Shipsphere Logistics</h2>
               <p>
-                Founded in 2010, Shipsphere Logistics has grown from a small 
-                transportation company to one of the leading logistics providers in India. 
-                We specialize in providing comprehensive logistics solutions including 
-                road transportation, warehousing, international shipping, and express delivery.
+                At Shipsphere Logistics, we handle every order as if it were our own.
+                We believe logistics isn't just about moving goods — it's about keeping promises. That's why we take full ownership, track every step closely, and ensure your deliveries arrive safely, on time, and directly to your customer's door.
               </p>
               <p>
-                With a fleet of modern vehicles, experienced team, and state-of-the-art 
-                technology, we ensure that your cargo reaches its destination safely and 
-                on time. Our commitment to quality, reliability, and customer satisfaction 
-                has made us the preferred choice for businesses across various industries.
+                What makes us different is our readiness to go beyond the standard agreements and terms. When challenges arise, we think outside the box and find solutions that work — because your success is our priority.
+              </p>
+              <p>
+                With Shipsphere, you get more than a service provider — you get a partner who goes the extra mile for every shipment, every time.
               </p>
             </motion.div>
             <motion.div
@@ -139,20 +137,20 @@ const About: React.FC = () => {
               className="overview-stats"
             >
               <div className="stat-item">
-                <div className="stat-number">13+</div>
-                <div className="stat-label">Years Experience</div>
-              </div>
-              <div className="stat-item">
                 <div className="stat-number">500+</div>
                 <div className="stat-label">Happy Clients</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">50+</div>
+                <div className="stat-number">200+</div>
                 <div className="stat-label">Cities Covered</div>
               </div>
               <div className="stat-item">
                 <div className="stat-number">100+</div>
                 <div className="stat-label">Team Members</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">24/7</div>
+                <div className="stat-label">Support Available</div>
               </div>
             </motion.div>
           </div>
@@ -252,7 +250,7 @@ const About: React.FC = () => {
                 className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
               >
                 <div className="timeline-content">
-                  <div className="timeline-year">{milestone.year}</div>
+                  {milestone.year && <div className="timeline-year">{milestone.year}</div>}
                   <h3>{milestone.title}</h3>
                   <p>{milestone.description}</p>
                 </div>
@@ -338,7 +336,11 @@ const About: React.FC = () => {
             <p>Let's discuss how we can help streamline your logistics operations</p>
             <div className="cta-buttons">
               <a href="tel:+919773575251" className="btn btn-primary">
-                Call Us
+                Call: +91 9773575251
+                <Phone />
+              </a>
+              <a href="tel:+917012279296" className="btn btn-primary">
+                Call: +91 7012279296
                 <Phone />
               </a>
               <a href="mailto:shipspheretechnologies@gmail.com" className="btn btn-secondary">

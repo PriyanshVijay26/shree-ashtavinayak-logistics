@@ -28,7 +28,18 @@ const Navbar: React.FC = () => {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <Truck className="logo-icon" />
+          <img 
+            src="/images/company-logo.jpg" 
+            alt="Shipsphere Logistics Logo" 
+            className="company-logo"
+            onError={(e) => {
+              // Fallback to truck icon if logo not found
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              target.nextElementSibling?.classList.remove('hidden');
+            }}
+          />
+          <Truck className="logo-icon hidden" />
           <span>Shipsphere Logistics</span>
         </Link>
 
@@ -94,7 +105,7 @@ const Navbar: React.FC = () => {
               <Link to="/login" className="nav-link">
                 Login
               </Link>
-              <Link to="/register" className="nav-link bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700">
+              <Link to="/register" className="nav-link bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
                 Register
               </Link>
             </div>
@@ -163,7 +174,7 @@ const Navbar: React.FC = () => {
             </Link>
             <Link
               to="/register"
-              className="nav-link-mobile bg-orange-600 text-white rounded-md mx-4 my-2 text-center"
+              className="nav-link-mobile bg-blue-600 text-white rounded-md mx-4 my-2 text-center"
               onClick={() => setIsOpen(false)}
             >
               Register

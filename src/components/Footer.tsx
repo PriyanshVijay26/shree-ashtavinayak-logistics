@@ -26,17 +26,22 @@ const Footer: React.FC = () => {
   const services = [
     'Road Transportation',
     'Warehousing & Storage',
-    'International Shipping',
+    'Local and National Shipping',
     'Express Delivery',
-    'Ocean Freight',
+    'Door to Door Logistic Services',
     'Air Freight'
   ];
 
   const contactInfo = [
     {
       icon: <Phone size={18} strokeWidth={1.5} />,
-      text: '9773575251',
+      text: '+91 9773575251',
       link: 'tel:+919773575251'
+    },
+    {
+      icon: <Phone size={18} strokeWidth={1.5} />,
+      text: '+91 7012279296',
+      link: 'tel:+917012279296'
     },
     {
       icon: <Mail size={18} strokeWidth={1.5} />,
@@ -45,7 +50,7 @@ const Footer: React.FC = () => {
     },
     {
       icon: <MapPin size={18} strokeWidth={1.5} />,
-      text: 'South Extension, Arjun Nagar, Kotla Mubarakpur, South Extension I, New Delhi',
+      text: 'South Extension, Arjun Nagar, 945/1, South Extension I, New Delhi',
       link: 'https://maps.google.com'
     },
     {
