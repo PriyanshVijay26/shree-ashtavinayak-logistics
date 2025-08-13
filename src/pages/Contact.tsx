@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
     {
       icon: <Phone />,
       title: 'Phone',
-      details: ['9773575251', '9773575251'],
+      details: ['9773575251', '7011279296'],
       action: 'tel:+919773575251'
     },
     {
@@ -73,7 +73,7 @@ const Contact: React.FC = () => {
     {
       icon: <MapPin />,
       title: 'Address',
-      details: ['South Extension, Arjun Nagar, Kotla Mubarakpur', 'South Extension I, New Delhi, Delhi 110003, India'],
+      details: ['945/1, South Extension, Arjun Nagar', 'South Extension I, New Delhi, Delhi 110003, India'],
       action: 'https://maps.google.com'
     },
     {

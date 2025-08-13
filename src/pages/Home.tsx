@@ -306,8 +306,8 @@ const Home = () => {
                 Call: +91 9773575251
                 <Phone />
               </a>
-              <a href="tel:+917012279296" className="btn btn-secondary">
-                Call: +91 7012279296
+              <a href="tel:+917011279296" className="btn btn-secondary">
+                Call: +91 7011279296
                 <Phone />
               </a>
             </div>

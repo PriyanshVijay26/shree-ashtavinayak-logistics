@@ -463,8 +463,8 @@ const Services: React.FC = () => {
                 Call: +91 9773575251
                 <Phone />
               </a>
-              <a href="tel:+917012279296" className="btn btn-primary">
-                Call: +91 7012279296
+              <a href="tel:+917011279296" className="btn btn-primary">
+                Call: +91 7011279296
                 <Phone />
               </a>
               <a href="mailto:shipspheretechnologies@gmail.com" className="btn btn-secondary">
