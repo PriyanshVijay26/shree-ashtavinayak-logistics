@@ -97,32 +97,7 @@ const Contact: React.FC = () => {
     'Cold Chain Logistics'
   ];
 
-  const branches = [
-    {
-      city: 'New Delhi',
-      address: 'South Extension, Arjun Nagar, Kotla Mubarakpur, South Extension I',
-      phone: '9773575251',
-      email: 'shipspheretechnologies@gmail.com'
-    },
-    {
-      city: 'Mumbai',
-      address: 'Logistics Hub, Andheri East',
-      phone: '9773575251',
-      email: 'mumbai@shipsphere.com'
-    },
-    {
-      city: 'Bangalore',
-      address: 'Cargo Center, Whitefield',
-      phone: '9773575251',
-      email: 'bangalore@shipsphere.com'
-    },
-    {
-      city: 'Chennai',
-      address: 'Logistics Zone, Ambattur',
-      phone: '9773575251',
-      email: 'chennai@shipsphere.com'
-    }
-  ];
+
 
   return (
     <div className="contact-page">
@@ -323,42 +298,6 @@ const Contact: React.FC = () => {
         </div>
       </section>
 
-      {/* Branch Offices */}
-      <section className="branch-offices">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="section-header"
-          >
-            <h2>Our Branch Offices</h2>
-            <p>Visit us at any of our locations across India</p>
-          </motion.div>
-
-          <div className="branches-grid">
-            {branches.map((branch, index) => (
-              <motion.div
-                key={branch.city}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="branch-card"
-              >
-                <div className="branch-header">
-                  <MapPin />
-                  <h3>{branch.city}</h3>
-                </div>
-                <div className="branch-details">
-                  <p><strong>Address:</strong> {branch.address}</p>
-                  <p><strong>Phone:</strong> <a href={`tel:${branch.phone}`}>{branch.phone}</a></p>
-                  <p><strong>Email:</strong> <a href={`mailto:${branch.email}`}>{branch.email}</a></p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Emergency Contact */}
       <section className="emergency-contact">

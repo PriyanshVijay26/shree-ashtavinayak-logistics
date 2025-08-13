@@ -761,56 +761,6 @@ section {
   color: var(--primary-dark);
 }
 
-/* Branch Offices */
-.branches-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.branch-card {
-  background: var(--bg-primary);
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: var(--shadow-md);
-  transition: all 0.3s ease;
-}
-
-.branch-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
-.branch-header {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.branch-header svg {
-  color: var(--primary-color);
-}
-
-.branch-header h3 {
-  color: var(--text-primary);
-  margin-bottom: 0;
-}
-
-.branch-details p {
-  margin-bottom: 0.5rem;
-  color: var(--text-secondary);
-}
-
-.branch-details a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-.branch-details a:hover {
-  text-decoration: underline;
-}
-
 /* Emergency Contact */
 .emergency-contact {
   background: var(--bg-dark);
