@@ -83,7 +83,7 @@ const Home = () => {
 
   const stats = [
     { number: '500+', label: 'Happy Clients', icon: <Users /> },
-    { number: '200+', label: 'Cities Covered', icon: <MapPin /> },
+    { number: '27000+', label: 'Pin Code Coverage', icon: <MapPin /> },
     { number: '24/7', label: 'Support', icon: <Phone /> },
     { number: '99%', label: 'On-time Delivery', icon: <Clock /> }
   ];
@@ -166,7 +166,7 @@ const Home = () => {
                   className="truck-message-box"
                 >
                   <Truck className="message-truck-icon" />
-                  <p>Let us handle your first order to experience our exceptional service quality!</p>
+                  <p>Handle your first order free of cost and experience our exceptional service quality!</p>
                 </motion.div>
               </div>
             </div>

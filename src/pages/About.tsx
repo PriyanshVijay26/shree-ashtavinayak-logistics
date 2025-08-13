@@ -141,8 +141,8 @@ const About: React.FC = () => {
                 <div className="stat-label">Happy Clients</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">200+</div>
-                <div className="stat-label">Cities Covered</div>
+                <div className="stat-number">27000+</div>
+                <div className="stat-label">Pin Code Coverage</div>
               </div>
               <div className="stat-item">
                 <div className="stat-number">100+</div>
