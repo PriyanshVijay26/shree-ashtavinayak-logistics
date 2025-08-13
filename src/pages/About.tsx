@@ -102,8 +102,8 @@ const About: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="hero-content"
           >
-            <h1>About Us</h1>
-            <p>Your trusted partner in logistics for over a decade</p>
+            <h1>Why Choose Us</h1>
+            <p>Door-to-Door Logistics You Can Rely On — Every Time, at Reliable Rates.</p>
           </motion.div>
         </div>
       </section>
