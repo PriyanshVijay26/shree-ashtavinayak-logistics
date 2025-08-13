@@ -15,7 +15,7 @@ Please add the following images to this directory:
 - **Format:** JPG format
 
 ## 3. Logistics Truck Image
-- **Filename:** `logistics-truck.png`
+remove - **Filename:** `logistics-truck.png`
 - **Description:** Professional image of a logistics truck for the Services page
 - **Recommended size:** 600x400px or similar aspect ratio
 - **Format:** PNG

@@ -105,7 +105,7 @@ const Navbar: React.FC = () => {
               <Link to="/login" className="nav-link">
                 Login
               </Link>
-              <Link to="/register" className="nav-link bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+              <Link to="/register" className="register-button">
                 Register
               </Link>
             </div>
@@ -174,7 +174,7 @@ const Navbar: React.FC = () => {
             </Link>
             <Link
               to="/register"
-              className="nav-link-mobile bg-blue-600 text-white rounded-md mx-4 my-2 text-center"
+              className="register-button-mobile"
               onClick={() => setIsOpen(false)}
             >
               Register

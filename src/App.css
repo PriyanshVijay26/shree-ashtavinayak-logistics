@@ -202,6 +202,44 @@ p {
   color: var(--primary-color);
 }
 
+/* Register Button Styles */
+.register-button {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: var(--primary-dark);
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.register-button-mobile {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin: 0.5rem 1rem;
+  text-align: center;
+  display: block;
+}
+
+.register-button-mobile:hover {
+  background-color: var(--primary-dark);
+  color: white !important;
+}
+
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
