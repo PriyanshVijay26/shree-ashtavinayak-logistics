@@ -6,7 +6,6 @@ import {
   Globe, 
   Clock, 
   Warehouse, 
-  Ship, 
   Plane, 
   Shield,
   FileText,
@@ -133,7 +132,7 @@ const Services: React.FC = () => {
               className="services-hero-image"
             >
               <img 
-                src="/images/logistics-truck.jpg" 
+                src="/images/logistics-truck.png" 
                 alt="Logistics Truck" 
                 className="truck-hero-image"
                 onError={(e) => {
