@@ -128,18 +128,18 @@ p {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .company-logo {
-  width: 8rem;
-  height: 8rem;
+  width: 3rem;
+  height: 3rem;
   object-fit: contain;
 }
 
 .logo-icon {
-  width: 7rem;
-  height: 7rem;
+  width: 2.5rem;
+  height: 2.5rem;
   color: var(--primary-color);
 }
 
@@ -1157,7 +1157,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .team-member:hover {
@@ -1174,7 +1174,7 @@ section {
   align-items: center;
   justify-content: center;
   color: white;
-  margin-right: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .member-image svg {
@@ -1183,8 +1183,9 @@ section {
 }
 
 .member-info {
-  text-align: left;
+  text-align: center;
   flex-grow: 1;
+  margin-top: 1rem;
 }
 
 .member-info h3 {
