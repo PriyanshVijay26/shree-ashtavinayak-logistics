@@ -7,7 +7,8 @@ import {
   Clock, 
   Send, 
   CheckCircle,
-  Truck
+  Truck,
+  QrCode
 } from 'lucide-react';
 
 const Contact: React.FC = () => {
@@ -111,6 +112,15 @@ const Contact: React.FC = () => {
             className="hero-content"
           >
             <h1>Contact Us</h1>
+            
+            {/* QR Code Section */}
+            <div className="qr-code-section">
+              <div className="qr-code-placeholder">
+                <QrCode size={100} color="rgba(255, 255, 255, 0.8)" />
+                <p className="qr-text">Scan for Quick Contact</p>
+              </div>
+            </div>
+            
             <p>Get in touch with our logistics experts today</p>
           </motion.div>
         </div>
