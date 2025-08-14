@@ -67,7 +67,7 @@ const About: React.FC = () => {
   const team = [
     {
       name: 'Ayush Singh',
-      position: 'Senior Executive',
+      position: 'COO',
       experience: '6 years in logistics',
       image: '/api/placeholder/150/150'
     },
