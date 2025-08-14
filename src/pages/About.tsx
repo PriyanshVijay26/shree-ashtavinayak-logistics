@@ -16,28 +16,28 @@ const About: React.FC = () => {
   const milestones = [
     {
       year: '',
-      title: 'Company Founded',
-      description: 'Started as a small transportation company in Delhi'
+      title: 'Humble Beginnings',
+      description: 'Started as a small transportation service in Delhi, built on the promise of reliability and customer-first service.'
     },
     {
       year: '',
-      title: 'Expansion Phase',
-      description: 'Expanded to 10 major cities across India'
+      title: 'Growing Reach',
+      description: 'Quickly expanded operations to cover multiple major cities across India, connecting businesses with customers nationwide.'
     },
     {
       year: '',
-      title: 'Warehouse Addition',
-      description: 'Added warehousing and storage facilities'
+      title: 'Warehouse & Storage Solutions',
+      description: 'Added secure warehousing facilities to support faster dispatches and flexible inventory management.'
     },
     {
       year: '',
-      title: 'Local & National Services',
-      description: 'Launched comprehensive local and national shipping services'
+      title: 'Local & Nationwide Coverage',
+      description: 'Introduced comprehensive shipping solutions — from same-city deliveries to long-distance transport — tailored for every client\'s needs.'
     },
     {
       year: '',
-      title: 'Digital Transformation',
-      description: 'Implemented advanced tracking and management systems'
+      title: 'Smart Logistics',
+      description: 'Integrated advanced tracking, route optimization, and shipment management tools for complete transparency.'
     }
   ];
 
@@ -145,7 +145,7 @@ const About: React.FC = () => {
                 <div className="stat-label">Pin Code Coverage</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">100+</div>
+                <div className="stat-number">10+</div>
                 <div className="stat-label">Team Members</div>
               </div>
               <div className="stat-item">

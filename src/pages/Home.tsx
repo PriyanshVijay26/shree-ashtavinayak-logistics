@@ -166,7 +166,7 @@ const Home = () => {
                   className="truck-message-box"
                 >
                   <Truck className="message-truck-icon" />
-                  <p>Handle your first order free of cost and experience our exceptional service quality!</p>
+                  <p>Your First Delivery is Free — Experience Our Reliable Door-to-Door Service and Save with Low-Cost Shipping</p>
                 </motion.div>
               </div>
             </div>

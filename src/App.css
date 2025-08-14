@@ -128,18 +128,18 @@ p {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .company-logo {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   object-fit: contain;
 }
 
 .logo-icon {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   color: var(--primary-color);
 }
 
@@ -261,7 +261,7 @@ p {
 }
 
 .hero-text {
-  padding-left: 1rem;
+  padding-left: 0.5rem;
 }
 
 .hero-text h1 {
