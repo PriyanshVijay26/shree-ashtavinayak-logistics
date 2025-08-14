@@ -115,7 +115,19 @@ const Contact: React.FC = () => {
             
             {/* QR Code Section */}
             <div className="qr-code-section">
-              <div className="qr-code-placeholder">
+              <img 
+                src="/images/qr-code-contact.jpg" 
+                alt="Contact QR Code - Scan for Quick Contact" 
+                className="contact-qr-code"
+                onError={(e) => {
+                  // Fallback to QR icon if image not found
+                  const target = e.currentTarget;
+                  target.style.display = 'none';
+                  const fallback = target.nextElementSibling as HTMLElement;
+                  if (fallback) fallback.style.display = 'flex';
+                }}
+              />
+              <div className="qr-code-placeholder" style={{ display: 'none' }}>
                 <QrCode size={100} color="rgba(255, 255, 255, 0.8)" />
                 <p className="qr-text">Scan for Quick Contact</p>
               </div>

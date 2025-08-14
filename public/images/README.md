@@ -15,10 +15,17 @@ Please add the following images to this directory:
 - **Format:** JPG format
 
 ## 3. Logistics Truck Image
-remove - **Filename:** `logistics-truck.png`
+- **Filename:** `logistics-truck.png`
 - **Description:** Professional image of a logistics truck for the Services page
 - **Recommended size:** 600x400px or similar aspect ratio
 - **Format:** PNG
+
+## 4. QR Code for Contact
+- **Filename:** `qr-code-contact.jpg`
+- **Description:** QR code for quick contact access on Contact page
+- **Recommended size:** 150x150px (square)
+- **Format:** JPG format
+- **Usage:** Displayed between "Contact Us" heading and tagline
 
 ## Image Placement
 - These images are already referenced in the code with fallback options
@@ -29,6 +36,7 @@ remove - **Filename:** `logistics-truck.png`
 - Hero image: Used in `src/pages/Home.tsx`
 - Company logo: Used in `src/components/Navbar.tsx`
 - Truck image: Used in `src/pages/Services.tsx`
+- QR code: Used in `src/pages/Contact.tsx`
 
 ## Contact Information Updated
 - Added phone number: +91 7012279296
