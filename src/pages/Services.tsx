@@ -107,6 +107,11 @@ const Services: React.FC = () => {
       title: 'Cold Chain Logistics',
       description: 'Temperature-controlled transportation for perishable goods.',
       icon: <Shield />
+    },
+    {
+      title: 'Appointment Deliveries',
+      description: 'Delivery your goods as per your preferred time.',
+      icon: <Clock />
     }
   ];
 
