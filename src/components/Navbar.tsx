@@ -32,7 +32,15 @@ const Navbar: React.FC = () => {
             src="/images/company-logo.jpg" 
             alt="Shipsphere Logistics Logo" 
             className="company-logo"
-            style={{ width: '1000px', height: 'auto', maxHeight: '70px' }}
+            style={{ 
+              width: '1000px !important', 
+              height: 'auto !important', 
+              maxHeight: '70px !important',
+              minWidth: '1000px !important',
+              objectFit: 'contain !important' as any,
+              margin: '0 !important',
+              padding: '0 !important'
+            }}
             onError={(e) => {
               // Fallback to truck icon if logo not found
               const target = e.target as HTMLImageElement;
