@@ -56,10 +56,9 @@ const Navbar: React.FC = () => {
             src="/images/company-logo.jpg" 
             alt="Shipsphere Logistics Logo" 
             style={{ 
-              width: '80rem',
-              height: '8rem',
-              minWidth: '80rem',
-              maxWidth: 'none',
+              width: '20rem',
+              height: '4.5rem',
+              maxWidth: '100%',
               objectFit: 'contain',
               margin: 0,
               padding: 0,
@@ -86,7 +85,7 @@ const Navbar: React.FC = () => {
           }} />
         </Link>
 
-        <div className="nav-menu" style={{ marginLeft: 'auto' }}>
+        <div className="nav-menu" style={{ marginLeft: 'auto', flexWrap: 'wrap' }}>
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -168,7 +167,8 @@ const Navbar: React.FC = () => {
                   fontWeight: '500',
                   border: 'none',
                   display: 'inline-block',
-                  transition: 'all 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  whiteSpace: 'nowrap'
                 }}
                 onMouseEnter={(e) => {
                   (e.target as HTMLElement).style.backgroundColor = '#1d4ed8';
