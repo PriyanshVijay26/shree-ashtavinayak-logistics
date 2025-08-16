@@ -34,10 +34,9 @@ const Navbar: React.FC = () => {
             className="company-logo"
             style={{ 
               width: '1000px !important', 
-              height: 'auto !important', 
-              maxHeight: '70px !important',
+              height: '80px !important', 
               minWidth: '1000px !important',
-              objectFit: 'contain !important' as any,
+              objectFit: 'cover !important' as any,
               margin: '0 !important',
               padding: '0 !important'
             }}
