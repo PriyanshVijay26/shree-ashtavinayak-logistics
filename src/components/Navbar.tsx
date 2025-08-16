@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav style={{
-      width: '100vw',
+      width: '100%',
       position: 'sticky',
       top: 0,
       zIndex: 1000,

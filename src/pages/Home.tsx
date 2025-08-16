@@ -101,9 +101,9 @@ const Home = () => {
           >
             <h1>Your Trusted Logistics Partner</h1>
             <p>
-              Shipsphere Logistics provides comprehensive transportation and 
-              warehousing solutions across India. We ensure your cargo reaches its 
-              destination safely and on time.
+              Shipsphere Logistics delivers surface, air, and express shipments nationwide with true door-to-door convenience.
+              We handle every order like our own, ensuring it arrives safe, on time, and hassle-free.
+              From pickup to final delivery, our team goes beyond terms and conditions to keep your business moving.
             </p>
             <div className="hero-buttons">
               <Link to="/services" className="btn btn-primary">
