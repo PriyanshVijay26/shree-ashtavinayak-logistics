@@ -25,32 +25,68 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <Link to="/" className="nav-logo">
+    <nav style={{
+      width: '100vw',
+      position: 'sticky',
+      top: 0,
+      zIndex: 1000,
+      backgroundColor: '#ffffff',
+      boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+      padding: 0,
+      margin: 0
+    }}>
+      <div style={{
+        display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        padding: 0,
+        margin: 0,
+        width: '100%',
+        maxWidth: '100vw'
+      }}>
+        <Link to="/" style={{
+          display: 'flex',
+          alignItems: 'center',
+          textDecoration: 'none',
+          margin: 0,
+          padding: 0,
+          flexShrink: 0
+        }}>
           <img 
             src="/images/company-logo.jpg" 
             alt="Shipsphere Logistics Logo" 
-            className="company-logo"
             style={{ 
-              width: '1000px !important', 
-              height: '80px !important', 
-              minWidth: '1000px !important',
-              objectFit: 'cover !important' as any,
-              margin: '0 !important',
-              padding: '0 !important'
+              width: '80rem',
+              height: '8rem',
+              minWidth: '80rem',
+              maxWidth: 'none',
+              objectFit: 'contain',
+              margin: 0,
+              padding: 0,
+              display: 'block'
             }}
             onError={(e) => {
               // Fallback to truck icon if logo not found
               const target = e.target as HTMLImageElement;
               target.style.display = 'none';
-              target.nextElementSibling?.classList.remove('hidden');
+              const truckIcon = target.nextElementSibling as HTMLElement;
+              if (truckIcon) {
+                truckIcon.style.display = 'block';
+                truckIcon.style.width = '4rem';
+                truckIcon.style.height = '4rem';
+                truckIcon.style.color = '#2563eb';
+              }
             }}
           />
-          <Truck className="logo-icon hidden" />
+          <Truck style={{
+            display: 'none',
+            width: '4rem',
+            height: '4rem',
+            color: '#2563eb'
+          }} />
         </Link>
 
-        <div className="nav-menu">
+        <div className="nav-menu" style={{ marginLeft: 'auto' }}>
           {navItems.map((item) => (
             <Link
               key={item.path}
