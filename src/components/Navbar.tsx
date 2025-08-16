@@ -25,45 +25,13 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav style={{
-      backgroundColor: '#ffffff',
-      boxShadow: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
-      position: 'sticky',
-      top: 0,
-      zIndex: 1000,
-      width: '100%',
-      padding: 0,
-      margin: 0
-    }}>
-      <div style={{
-        display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        padding: '0',
-        minHeight: '6rem',
-        width: '100%',
-        margin: 0
-      }}>
-        <Link to="/" style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: 0,
-          textDecoration: 'none',
-          color: '#1f2937',
-          fontWeight: 700,
-          margin: 0,
-          padding: 0
-        }}>
+    <nav className="navbar">
+      <div className="nav-container">
+        <Link to="/" className="nav-logo">
           <img 
             src="/images/company-logo.jpg" 
             alt="Shipsphere Logistics Logo" 
-            style={{
-              width: '40rem',
-              height: '5rem',
-              objectFit: 'contain',
-              margin: 0,
-              padding: 0
-            }}
+            className="company-logo"
             onError={(e) => {
               // Fallback to truck icon if logo not found
               const target = e.target as HTMLImageElement;
@@ -71,33 +39,15 @@ const Navbar: React.FC = () => {
               target.nextElementSibling?.classList.remove('hidden');
             }}
           />
-          <Truck style={{
-            width: '30rem',
-            height: '5rem',
-            color: '#2563eb',
-            margin: 0,
-            padding: 0,
-            display: 'none'
-          }} className="logo-icon hidden" />
+          <Truck className="logo-icon hidden" />
         </Link>
 
-        <div style={{
-          display: 'flex',
-          gap: '2rem',
-          marginLeft: 'auto',
-          paddingRight: '2rem'
-        }}>
+        <div className="nav-menu">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              style={{
-                textDecoration: 'none',
-                color: location.pathname === item.path ? '#2563eb' : '#6b7280',
-                fontWeight: 500,
-                transition: 'color 0.3s ease',
-                position: 'relative'
-              }}
+              className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
               onClick={() => setIsOpen(false)}
             >
               {item.label}
@@ -106,16 +56,14 @@ const Navbar: React.FC = () => {
           
           {/* Authentication Links */}
           {isAuthenticated ? (
-            <div style={{ position: 'relative' }}>
+            <div className="auth-menu">
               <button
                 onClick={() => setShowUserMenu(!showUserMenu)}
+                className="nav-link"
                 style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.5rem',
-                  textDecoration: 'none',
-                  color: '#6b7280',
-                  fontWeight: 500,
                   background: 'none',
                   border: 'none',
                   cursor: 'pointer'
@@ -129,11 +77,11 @@ const Navbar: React.FC = () => {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border"
+                  className="user-menu"
                 >
                   <Link
                     to="/dashboard"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="user-menu-item"
                     onClick={() => setShowUserMenu(false)}
                   >
                     <Settings className="inline h-4 w-4 mr-2" />
@@ -142,7 +90,7 @@ const Navbar: React.FC = () => {
                   {user?.role === 'ADMIN' && (
                     <Link
                       to="/admin/cities"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="user-menu-item"
                       onClick={() => setShowUserMenu(false)}
                     >
                       <Settings className="inline h-4 w-4 mr-2" />
@@ -151,7 +99,7 @@ const Navbar: React.FC = () => {
                   )}
                   <button
                     onClick={handleLogout}
-                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="user-menu-item"
                   >
                     <LogOut className="inline h-4 w-4 mr-2" />
                     Logout
@@ -160,45 +108,18 @@ const Navbar: React.FC = () => {
               )}
             </div>
           ) : (
-            <div style={{ display: 'flex', gap: '1rem' }}>
-              <Link 
-                to="/login" 
-                style={{
-                  textDecoration: 'none',
-                  color: '#6b7280',
-                  fontWeight: 500,
-                  transition: 'color 0.3s ease'
-                }}
-              >
+            <div className="auth-links">
+              <Link to="/login" className="nav-link">
                 Login
               </Link>
-              <Link 
-                to="/register" 
-                style={{
-                  backgroundColor: '#2563eb',
-                  color: 'white',
-                  padding: '0.5rem 1rem',
-                  borderRadius: '0.5rem',
-                  textDecoration: 'none',
-                  fontWeight: 500,
-                  transition: 'all 0.3s ease',
-                  border: 'none'
-                }}
-              >
+              <Link to="/register" className="nav-link bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
                 Register
               </Link>
             </div>
           )}
         </div>
 
-        <div 
-          style={{
-            display: 'none',
-            cursor: 'pointer',
-            padding: '0.5rem'
-          }}
-          onClick={() => setIsOpen(!isOpen)}
-        >
+        <div className="nav-toggle" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X /> : <Menu />}
         </div>
       </div>
