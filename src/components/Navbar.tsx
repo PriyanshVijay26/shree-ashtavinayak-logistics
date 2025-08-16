@@ -32,6 +32,7 @@ const Navbar: React.FC = () => {
             src="/images/company-logo.jpg" 
             alt="Shipsphere Logistics Logo" 
             className="company-logo"
+            style={{ width: '150px', height: 'auto', maxHeight: '50px' }}
             onError={(e) => {
               // Fallback to truck icon if logo not found
               const target = e.target as HTMLImageElement;
@@ -112,7 +113,27 @@ const Navbar: React.FC = () => {
               <Link to="/login" className="nav-link">
                 Login
               </Link>
-              <Link to="/register" className="nav-link bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+              <Link 
+                to="/register" 
+                className="nav-link"
+                style={{ 
+                  backgroundColor: '#2563eb', 
+                  color: '#ffffff', 
+                  padding: '8px 16px', 
+                  borderRadius: '6px', 
+                  textDecoration: 'none',
+                  fontWeight: '500',
+                  border: 'none',
+                  display: 'inline-block',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  (e.target as HTMLElement).style.backgroundColor = '#1d4ed8';
+                }}
+                onMouseLeave={(e) => {
+                  (e.target as HTMLElement).style.backgroundColor = '#2563eb';
+                }}
+              >
                 Register
               </Link>
             </div>
