@@ -40,7 +40,6 @@ const Navbar: React.FC = () => {
             }}
           />
           <Truck className="logo-icon hidden" />
-          <span>Shipsphere Logistics</span>
         </Link>
 
         <div className="nav-menu">
