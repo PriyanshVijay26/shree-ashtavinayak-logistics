@@ -157,25 +157,8 @@ const Navbar: React.FC = () => {
               </Link>
               <Link 
                 to="/register" 
-                className="nav-link"
-                style={{ 
-                  backgroundColor: '#2563eb', 
-                  color: '#ffffff', 
-                  padding: '8px 16px', 
-                  borderRadius: '6px', 
-                  textDecoration: 'none',
-                  fontWeight: '500',
-                  border: 'none',
-                  display: 'inline-block',
-                  transition: 'all 0.3s ease',
-                  whiteSpace: 'nowrap'
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLElement).style.backgroundColor = '#1d4ed8';
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLElement).style.backgroundColor = '#2563eb';
-                }}
+                className="btn btn-primary"
+                style={{ whiteSpace: 'nowrap' }}
               >
                 Register
               </Link>
