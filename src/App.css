@@ -112,14 +112,18 @@ p {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
+  padding: 0;
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   min-height: 8rem;
+  width: 100%;
+  max-width: none;
 }
 
 .nav-logo {
@@ -129,17 +133,20 @@ p {
   text-decoration: none;
   color: var(--text-primary);
   font-weight: 700;
+  flex-grow: 1;
+  justify-content: flex-start;
 }
 
 .company-logo {
-  width: 50rem;
-  height: 6rem;
+  width: 80rem;
+  height: 8rem;
   object-fit: contain;
+  max-width: none;
 }
 
 .logo-icon {
-  width: 20rem;
-  height: 6rem;
+  width: 60rem;
+  height: 8rem;
   color: var(--primary-color);
 }
 
@@ -150,6 +157,8 @@ p {
 .nav-menu {
   display: flex;
   gap: 2rem;
+  margin-left: auto;
+  padding-right: 2rem;
 }
 
 .nav-link {
