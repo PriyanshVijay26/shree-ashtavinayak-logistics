@@ -74,19 +74,19 @@ const About: React.FC = () => {
     {
       name: 'Kanav Sachdeva',
       position: 'Business Relationship Executive',
-      experience: '3 years in business development',
+      experience: '3 years in logistics and business relations',
       image: '/api/placeholder/150/150'
     },
     {
       name: 'Arun Singh',
       position: 'Business Development Head',
-      experience: '10 years in FTL PTL business',
+      experience: '10 years in FTL/PTL logistics and business development',
       image: '/api/placeholder/150/150'
     },
     {
       name: 'Tripti Pal',
       position: 'Customer Relation',
-      experience: '3 years in customer service',
+      experience: '3 years in support operations and customer care',
       image: '/api/placeholder/150/150'
     }
   ];
