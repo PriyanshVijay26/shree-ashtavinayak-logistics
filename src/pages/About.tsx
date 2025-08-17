@@ -137,7 +137,7 @@ const About: React.FC = () => {
               className="overview-stats"
             >
               <div className="stat-item">
-                <div className="stat-number">500+</div>
+                <div className="stat-number">250+</div>
                 <div className="stat-label">Happy Clients</div>
               </div>
               <div className="stat-item">

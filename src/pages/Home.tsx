@@ -82,7 +82,7 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Happy Clients', icon: <Users /> },
+    { number: '250+', label: 'Happy Clients', icon: <Users /> },
     { number: '27000+', label: 'Pin Code Coverage', icon: <MapPin /> },
     { number: '24/7', label: 'Support', icon: <Phone /> },
     { number: '99%', label: 'On-time Delivery', icon: <Clock /> }
