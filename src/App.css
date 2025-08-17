@@ -484,6 +484,16 @@ p {
   font-size: 1.25rem;
 }
 
+.contact-page .page-hero {
+  text-align: initial;
+}
+
+.contact-page .hero-content {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 2rem;
+}
+
 /* Contact hero full-width, evenly spaced row */
 .contact-page .page-hero .container {
   max-width: 100%;
@@ -492,7 +502,7 @@ p {
 
 .contact-hero-row {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   column-gap: 2rem;
   width: 100%;
@@ -528,6 +538,12 @@ p {
     justify-self: center;
     text-align: center;
   }
+}
+
+/* Ensure QR code has a consistent, visible size in the header */
+.contact-page .page-hero .contact-qr-code {
+  width: 120px;
+  height: 120px;
 }
 
 /* Sections */
