@@ -491,27 +491,30 @@ p {
 .contact-page .hero-content {
   max-width: 100%;
   margin: 0;
-  padding: 0 2rem;
+  padding: 0;
+  width: 100vw;
 }
 
 /* Contact hero full-width, evenly spaced row */
 .contact-page .page-hero .container {
   max-width: 100%;
-  padding: 2rem 2rem;
+  padding: 0;
+  width: 100vw;
 }
 
 .contact-hero-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  column-gap: 2rem;
-  width: 100%;
+  width: 100vw;
+  padding: 2rem 0;
+  box-sizing: border-box;
 }
 
 .contact-hero-row h1 {
   margin: 0;
-  justify-self: start;
-  text-align: left;
+  justify-self: center;
+  text-align: center;
 }
 
 .qr-inline {
@@ -522,8 +525,8 @@ p {
 
 .contact-hero-tagline {
   margin: 0;
-  justify-self: end;
-  text-align: right;
+  justify-self: center;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
