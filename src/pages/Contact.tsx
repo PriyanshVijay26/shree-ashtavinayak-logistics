@@ -111,29 +111,28 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="hero-content"
           >
-            <h1>Contact Us</h1>
-            
-            {/* QR Code Section */}
-            <div className="qr-code-section">
-              <img 
-                src="/images/qr-code-contact.jpg" 
-                alt="Contact QR Code - Scan for Quick Contact" 
-                className="contact-qr-code"
-                onError={(e) => {
-                  // Fallback to QR icon if image not found
-                  const target = e.currentTarget;
-                  target.style.display = 'none';
-                  const fallback = target.nextElementSibling as HTMLElement;
-                  if (fallback) fallback.style.display = 'flex';
-                }}
-              />
-              <div className="qr-code-placeholder" style={{ display: 'none' }}>
-                <QrCode size={100} color="rgba(255, 255, 255, 0.8)" />
-                <p className="qr-text">Scan for Quick Contact</p>
+            <div className="contact-hero-row">
+              <h1>Contact Us</h1>
+              <div className="qr-inline">
+                <img 
+                  src="/images/qr-code-contact.jpg" 
+                  alt="Contact QR Code - Scan for Quick Contact" 
+                  className="contact-qr-code"
+                  onError={(e) => {
+                    // Fallback to QR icon if image not found
+                    const target = e.currentTarget;
+                    target.style.display = 'none';
+                    const fallback = target.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = 'flex';
+                  }}
+                />
+                <div className="qr-code-placeholder" style={{ display: 'none' }}>
+                  <QrCode size={100} color="rgba(255, 255, 255, 0.8)" />
+                  <p className="qr-text">Scan for Quick Contact</p>
+                </div>
               </div>
+              <p className="contact-hero-tagline">Get in touch with our logistics experts today</p>
             </div>
-            
-            <p>Get in touch with our logistics experts today</p>
           </motion.div>
         </div>
       </section>
