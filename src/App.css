@@ -515,7 +515,7 @@ p {
   margin: 0;
   justify-self: center;
   text-align: center;
-  padding-left: 3rem;
+  padding-left: 15rem;
 }
 
 .qr-inline {
@@ -528,7 +528,7 @@ p {
   margin: 0;
   justify-self: center;
   text-align: center;
-  padding-right: 3rem;
+  padding-right: 15rem;
 }
 
 @media (max-width: 768px) {
